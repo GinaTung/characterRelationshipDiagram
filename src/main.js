@@ -4,6 +4,7 @@ import { createPinia } from 'pinia';
 import PrimeVue from 'primevue/config';
 import App from './App.vue';
 import router from './router';
+
 // tailwind
 import './assets/main.scss';
 import Aura from '@primevue/themes/aura';
