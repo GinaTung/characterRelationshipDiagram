@@ -8,6 +8,8 @@ import router from './router';
 import './assets/main.scss';
 import Aura from '@primevue/themes/aura';
 import 'primeicons/primeicons.css'
+// import RelationGraph from 'relation-graph'
+import RelationGraph from 'relation-graph-vue3'
 const app = createApp(App);
 app.use(createPinia());
 app.use(router);
@@ -22,5 +24,5 @@ app.use(PrimeVue, {
     },
   },
 });
-
+app.use(RelationGraph);
 app.mount('#app');

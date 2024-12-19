@@ -15,6 +15,8 @@
     "pinia": "^2.0.28",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
+    "relation-graph": "^2.2.10",
+    "relation-graph-vue3": "^2.2.10",
     "save-dev": "^0.0.1-security",
     "tailwindcss-primeui": "^0.3.4",
     "vue": "^3.2.45",
