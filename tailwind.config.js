@@ -6,7 +6,11 @@ export default {
     './public/**/*.html',
     './src/**/*.{js,jsx,ts,tsx,vue}',
   ],
+  darkMode: false,
   theme: {
+    backgroundColor: {
+      'kg-color': '#f7f7f7',
+    },
     extend: {},
   },
 };

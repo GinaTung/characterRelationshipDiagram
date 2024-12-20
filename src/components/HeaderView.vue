@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="sticky top-0 z-50">
     <Menubar>
       <template #start>
         <h1 class="text-3xl">故事人物關係圖</h1>

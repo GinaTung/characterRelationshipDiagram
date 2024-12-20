@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-// import RelationGraph from 'relation-graph/vue3';
 
 const graphRef = ref(null);
 const options = {
