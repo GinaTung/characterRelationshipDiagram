@@ -42,6 +42,7 @@ import FooterView from './components/FooterView.vue';
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  z-index: 1001;
 }
 
 .btn:before {
@@ -71,7 +72,7 @@ import FooterView from './components/FooterView.vue';
   stroke: var(--p-surface-0);
   stroke-width: 1;
   transform: translateX(0);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .btn2 span {
   right: 0px;
