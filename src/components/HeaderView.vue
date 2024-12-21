@@ -1,6 +1,6 @@
 <template>
-  <div class="sticky top-0 z-50">
-    <Menubar class="mt-6">
+  <div class="sticky top-0" style="z-index: 10001;">
+    <Menubar class="mt-3">
       <template #start>
         <h1 class="text-3xl">故事人物關係圖</h1>
       </template>
