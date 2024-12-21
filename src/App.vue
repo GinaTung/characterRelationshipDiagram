@@ -5,7 +5,7 @@ import FooterView from './components/FooterView.vue';
 </script>
 
 <template>
-  <Button aria-label="Manage Relationships" style="position: absolute; top: 23%; left: 5px" unstyled class="btn btn2">
+  <Button aria-label="Manage RelationshipInformation" style="position: absolute; top: 23%; left: 5px" unstyled class="btn btn2">
     <i class="pi pi-search"></i>
     <span>查詢人物關係圖資訊</span>
   </Button>
@@ -18,17 +18,16 @@ import FooterView from './components/FooterView.vue';
     <span>管理人物關係</span>
     <i class="pi pi-share-alt"></i>
   </Button>
-  <Button aria-label="Manage Relationships" style="position: absolute; top: 30%; right: 5px" unstyled class="btn">
+  <Button aria-label="Manage Nodes" style="position: absolute; top: 30%; right: 5px" unstyled class="btn">
     <span>管理人物節點</span>
     <i class="pi pi-user"></i>
   </Button>
-  <Button aria-label="Manage Relationships" style="position: absolute; top: 37%; right: 5px" unstyled class="btn">
+  <Button aria-label="Manage RelationshipGraph" style="position: absolute; top: 37%; right: 5px" unstyled class="btn">
     <span>管理整體關係圖</span>
     <i class="pi pi-folder"></i>
   </Button>
 </template>
 <style>
-/* Floating Button Styles */
 .btn {
   position: relative;
   color: var(--p-slate-950);
@@ -41,7 +40,7 @@ import FooterView from './components/FooterView.vue';
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   z-index: 1001;
 }
 
@@ -54,7 +53,7 @@ import FooterView from './components/FooterView.vue';
   height: 48px;
   background: var(--p-surface-0);
   border-radius: 28px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   z-index: 0;
 }
 .btn2:before {
@@ -63,6 +62,7 @@ import FooterView from './components/FooterView.vue';
 .btn i {
   position: relative;
   z-index: 1;
+  transition: color 0.5s ease; /* 讓圖標顏色過渡 */
 }
 
 .btn span {
@@ -72,13 +72,14 @@ import FooterView from './components/FooterView.vue';
   stroke: var(--p-surface-0);
   stroke-width: 1;
   transform: translateX(0);
-  transition: all 0.5s ease;
+  transition: all 0.6s ease;
 }
 .btn2 span {
   right: 0px;
   left: 4px;
   transform: translateX(100);
 }
+
 .btn:hover:before {
   width: 100%;
   background: var(--p-slate-950);
@@ -89,12 +90,29 @@ import FooterView from './components/FooterView.vue';
   transform: translateX(0);
 }
 
-.btn:hover,
+.btn:hover {
+  color: var(--p-surface-0);
+}
+
 .btn:focus {
   color: var(--p-surface-0);
 }
 
-.btn:active {
-  transform: scale(0.96);
+.btn:focus:not(:hover) {
+  color: var(--p-slate-950); /* 恢復原始文字顏色 */
 }
+
+.btn:focus:not(:hover):before {
+  width: 48px; /* 恢復原始寬度 */
+  background: var(--p-surface-0); /* 恢復原始背景色 */
+}
+
+.btn:focus:not(:hover) i {
+  color: var(--p-slate-950); /* 恢復圖標顏色 */
+}
+
+.btn:active {
+  transform: scale(1.05);
+}
+
 </style>
