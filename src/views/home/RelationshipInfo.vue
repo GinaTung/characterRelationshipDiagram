@@ -20,13 +20,14 @@ const selectedCard = computed(() => infoCardData.find((item) => item.name === in
   <!-- 渲染選中的卡片 -->
   <Card
     v-if="selectedCard"
-    style="width: 25rem; overflow: hidden"
+    style="overflow: hidden"
     class="w-1/4"
   >
     <template #header>
       <img
         :alt="selectedCard.name"
         :src="selectedCard.img"
+        class="w-full"
       />
     </template>
     <template #title>{{ selectedCard.name }}</template>
