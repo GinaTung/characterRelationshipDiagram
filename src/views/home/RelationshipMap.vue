@@ -1,31 +1,100 @@
 <script setup>
+import { ref, watch } from 'vue';
 import { useCommonKgGraphStore } from '@/stores/getCommonKgGraph';
 import useKgGraphDataStore from '@/stores/getKgGraphData';
-// 狀態管理
+
+// 状态管理
 const getCommonKgGraph = useCommonKgGraphStore();
 const getKgGraphData = useKgGraphDataStore();
 
-// 綁定 RelationGraph 實例到 Pinia 的 graphRef
+// 绑定 RelationGraph 实例到 Pinia 的 graphRef
 const bindGraphRef = (el) => {
   getKgGraphData.graphRef = el;
 };
 
+// 绑定 showMask 的状态
+const showMask = ref(true);
+const lastToggleTime = ref(null); // 保存上次切换遮罩的时间
+const maskTimeout = null; // 用于定时器
+
+const refreshGraphWithOptions = () => {
+  const graphInstance = getKgGraphData.graphRef?.getInstance();
+  if (graphInstance) {
+    graphInstance.setOptions(getCommonKgGraph.graphOptions); // 更新配置
+    graphInstance.refresh(); // 刷新图表
+    console.log('Graph instance refreshed with updated options.');
+  } else {
+    console.warn('Graph instance not available.');
+  }
+};
+
+// 监听 showMask 变化
+watch(showMask, (newVal) => {
+  // 更新透明度
+  const relEasyView = document.querySelector('.relation-graph .rel-easy-view');
+  if (relEasyView) {
+    relEasyView.style.opacity = newVal ? '1' : '0';
+    relEasyView.style.zIndex = newVal ? '1000' : '-1';
+  }
+
+  // 更新 disableZoom 状态
+  getCommonKgGraph.graphOptions.disableZoom = newVal;
+  console.log(`disableZoom updated to: ${getCommonKgGraph.graphOptions.disableZoom}`);
+
+  // 刷新图表以应用更改
+  refreshGraphWithOptions();
+});
+const toggleMask = () => {
+  showMask.value = false;
+};
+const toggleMask2 = () => {
+  showMask.value = true;
+};
+// 切换遮罩状态
+// const toggleMask3 = () => {
+//   // 清除已有定时器（防止多次点击时重复触发）
+//   if (maskTimeout) {
+//     clearTimeout(maskTimeout);
+//     maskTimeout = null;
+//   }
+
+//   // 切换遮罩状态并记录时间戳
+//   showMask.value = !showMask.value;
+//   lastToggleTime.value = Date.now();
+
+//   console.log(`Mask toggled to: ${showMask.value}, at time: ${lastToggleTime.value}`);
+
+//   // 如果遮罩被打开，设置10秒后自动关闭
+//   if (!showMask.value) {
+//     maskTimeout = setTimeout(() => {
+//       showMask.value = true;
+//       console.log('Mask automatically hidden after 10 seconds.');
+//     }, 20000); // 10秒后隐藏遮罩
+//   }
+// };
 </script>
+
 <template>
-  <div style="height: calc(100vh - 100px); max-width: 100%; " class="w-3/4 rounded-lg" >
-    <relation-graph :ref="bindGraphRef" :options="getCommonKgGraph.graphOptions" >
+  <div style="height: calc(100vh - 100px); max-width: 100%;position: relative;" class="w-3/4 rounded-lg" @click="toggleMask">
+    <Button icon="pi pi-eye" severity="secondary" rounded aria-label="Search" @click.stop="toggleMask2" style="  position: absolute;top: 15px;left: 15px;z-index: 5;" />
+    <relation-graph :ref="bindGraphRef" :options="getCommonKgGraph.graphOptions">
       <template #node="{ node }">
-        <div class="my-node-style" :style="{ 'background-image': 'url(' + node.data.icon + ')' }">
-        </div>
+        <div class="my-node-style" :style="{ 'background-image': 'url(' + node.data.icon + ')' }"></div>
         <div class="c-node-name" :style="{ color: node.color }">{{ node.text }}</div>
       </template>
     </relation-graph>
   </div>
-
 </template>
+
 <style lang="scss">
 .relation-graph .rel-map {
   border-radius: 12px !important;
+}
+.relation-graph .rel-easy-view {
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 1000;
+  border-radius: 12px !important;
+  opacity: 1;
 }
 
 .my-node-style {

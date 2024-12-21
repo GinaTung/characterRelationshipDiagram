@@ -23,6 +23,9 @@ export default defineStore('useKgGraphDataStore', () => {
     instance.refresh();
     instance.setZoom(80);
   };
+  // 遮罩顯示狀態
+  const showMask = ref(true);
+  // 點擊遮罩切換狀態
 
   // 顯示圖表
   const showGraph = async (data) => {
@@ -68,5 +71,6 @@ export default defineStore('useKgGraphDataStore', () => {
     updateGraphData,
     selectedGraph,
     jsonData,
+    showMask,
   };
 });
