@@ -4,7 +4,7 @@ import HeaderView from './components/HeaderView.vue';
 </script>
 
 <template>
-  <div class="bg-kg-color">
+  <div class="my-8">
     <HeaderView />
     <RouterView />
   </div>

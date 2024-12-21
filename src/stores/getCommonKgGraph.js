@@ -27,11 +27,13 @@ export const useCommonKgGraphStore = defineStore('graphKgStore', () => {
 
   const graphOptions = {
     debug: false,
-    allowShowMiniToolBar: false,
+    allowShowMiniToolBar: true,
     defaultNodeBorderWidth: 0,
     allowSwitchLineShape: true,
     allowSwitchJunctionPoint: false,
+    // backgroundColor: '#d7ddd9',
     defaultLineShape: 1,
+    defaultNodeBorderColor: '#677f6b',
     // defaultLineColor: '#000000',
     defaultLineWidth: 2,
     moveToCenterWhenRefresh: true,

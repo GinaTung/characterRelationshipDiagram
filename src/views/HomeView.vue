@@ -1,15 +1,13 @@
 <script setup>
-import TestView from './home/TestView.vue';
-import HomeGraph from './home/HomeGraph.vue';
+import RelationshipMap from './home/RelationshipMap.vue';
 import SearchBar from './home/SearchBar.vue';
-import Test2View from './home/Test2View.vue';
+import RelationshipInfo from './home/RelationshipInfo.vue';
 </script>
 
 <template>
-  <main>
-    <!-- <Button label="test" /> -->
-    <SearchBar />
-    <!-- <Test2View /> -->
-    <HomeGraph />
+  <SearchBar />
+  <main class="mx-10 flex gap-5">
+    <RelationshipInfo/>
+    <RelationshipMap />
   </main>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="sticky top-0 z-50">
-    <Menubar>
+    <Menubar class="mx-10 mt-6">
       <template #start>
         <h1 class="text-3xl">故事人物關係圖</h1>
       </template>

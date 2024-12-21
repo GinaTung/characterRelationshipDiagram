@@ -2,85 +2,71 @@ import { defineStore } from 'pinia';
 import {
   ref, onMounted, nextTick, watch,
 } from 'vue';
-import { graphData } from '@/constants/graphData';
+import { graphData, defaultGraphData } from '@/constants/graphData';
 
 export default defineStore('useKgGraphDataStore', () => {
   const graphRef = ref(null);
   const selectedGraph = ref('GraphA');
+  const jsonData = ref({});
+  const jsonData2 = defaultGraphData;
 
-  let jsonData = {}; // 初始化 jsonData 為空物件
-
+  // 更新圖表數據
   const updateGraphData = (newGraphName) => {
-    selectedGraph.value = newGraphName; // 更新選擇的圖譜名稱
+    selectedGraph.value = newGraphName;
     console.log('Updating graph to:', selectedGraph.value);
+  };
+
+  const updateGraphInstance = (instance, data) => {
+    instance.setJsonData(data);
+    instance.moveToCenter();
+    instance.zoomToFit();
+    instance.refresh();
+    instance.setZoom(80);
   };
 
   // 顯示圖表
   const showGraph = async (data) => {
     if (!graphRef.value) {
+      console.warn('Graph reference is not set.');
       return;
     }
-    console.log(data);
-
     const graphInstance = graphRef.value.getInstance();
     if (!graphInstance) {
+      console.warn('Graph instance is not available.');
       return;
     }
-
     try {
-      await graphInstance.setJsonData(jsonData);
+      await updateGraphInstance(graphInstance, data);
     } catch (error) {
       console.error('Error rendering graph:', error);
     }
   };
 
+  // 初始化圖表
   const setupGraph = async () => {
     await nextTick();
-    showGraph(jsonData); // 渲染初始圖表
+    showGraph(jsonData.value);
   };
-  // 監聽 selectedGraph 變動
+
+  // 監視選擇的圖表
   watch(selectedGraph, (newGraphName) => {
-    const graphNames = graphData.map((item) => item.name); // 提取所有圖表名稱
-
-    if (graphNames.includes(newGraphName)) {
-      const selectedData = graphData.find((item) => item.name === newGraphName)?.data; // 使用?.來避免 undefined
-      if (selectedData) {
-        console.log('Selected Data:', selectedData);
-        jsonData = selectedData; // 更新 jsonData
-        showGraph(jsonData); // 呼叫重新渲染
-      } else {
-        console.log('Graph not found in graphData');
-      }
-    } else {
-      console.log('Graph not found in graphNames');
-    }
+    const selectedData = graphData.find((item) => item.name === newGraphName)?.data || jsonData2;
+    jsonData.value = selectedData;
+    showGraph(jsonData.value);
   });
+
+  // 設置初始數據並掛載
   onMounted(() => {
+    jsonData.value = defaultGraphData;
     setupGraph();
-    jsonData = {
-      rootId: 'a',
-      nodes: [
-        { id: 'a', text: 'a' },
-        { id: 'b', text: 'b' },
-        { id: 'c', text: 'c' },
-        { id: 'd', text: 'd' },
-        { id: 'e', text: 'e' },
-        { id: 'f', text: 'f' },
-      ],
-      lines: [
-        { from: 'a', to: 'b' },
-        { from: 'a', to: 'c' },
-        { from: 'a', to: 'd' },
-        { from: 'a', to: 'e' },
-        { from: 'a', to: 'f' },
-      ],
-    };
   });
 
+  // 返回方法和狀態
   return {
     graphRef,
     setupGraph,
     updateGraphData,
     selectedGraph,
+    jsonData,
   };
 });

@@ -1,10 +1,29 @@
+export const defaultGraphData = {
+  rootId: 'a',
+  nodes: [
+    { id: 'a', text: 'a' },
+    { id: 'b', text: 'b' },
+    { id: 'c', text: 'c' },
+    { id: 'd', text: 'd' },
+    { id: 'e', text: 'e' },
+    { id: 'f', text: 'f' },
+  ],
+  lines: [
+    { from: 'a', to: 'b' },
+    { from: 'a', to: 'c' },
+    { from: 'a', to: 'd' },
+    { from: 'a', to: 'e' },
+    { from: 'a', to: 'f' },
+  ],
+};
+
 export const graphData = [
   {
     name: 'GraphA',
     data: {
-      rootId: 'a',
+      rootId: '1',
       nodes: [
-        { id: 'a', text: 'a' },
+        { id: '1', text: 'a' },
         { id: 'b', text: 'b' },
         { id: 'c', text: 'c' },
         { id: 'd', text: 'd' },
@@ -12,20 +31,30 @@ export const graphData = [
         { id: 'f', text: 'f' },
       ],
       lines: [
-        { from: 'a', to: 'b' },
-        { from: 'a', to: 'c' },
-        { from: 'a', to: 'd' },
-        { from: 'a', to: 'e' },
-        { from: 'a', to: 'f' },
+        { from: '1', to: 'b' },
+        { from: '1', to: 'c' },
+        { from: '1', to: 'd' },
+        { from: '1', to: 'e' },
+        { from: '1', to: 'f' },
       ],
     },
   },
   {
-    name: 'Hunter',
+    name: 'HUNTER×HUNTER',
     data: {
       rootId: '1',
       nodes: [
-        { id: '1', text: '小傑·富力士', labelStr: '人物' },
+        {
+          id: '1',
+          text: '小傑·富力士',
+          labelStr: '人物',
+          color: '#ff0000',
+          data: {
+            icon: '/src/assets/images/hunters/gon-freecss.jpg', // 假設圖片放在 public 資料夾
+            sexType: 'male',
+            isGoodMan: true,
+          },
+        },
         { id: '2', text: '奇犽·揍敵客', labelStr: '人物' },
         { id: '3', text: '酷拉皮卡', labelStr: '人物' },
         { id: '4', text: '雷歐力·帕拉丁奈特', labelStr: '人物' },
@@ -66,6 +95,64 @@ export const graphData = [
         {
           id: '10', from: '5', to: '2', text: '關注',
         },
+      ],
+    },
+  },
+  {
+    name: 'demoData',
+    data: {
+      rootId: '1',
+      nodes: [
+        {
+          id: '1',
+          text: 'Node 1',
+          data: {
+            icon: '/src/assets/images/hunters/gon-freecss.jpg', // 假設圖片放在 public 資料夾
+            sexType: 'male',
+            isGoodMan: true,
+          },
+          color: '#ff0000',
+        },
+        {
+          id: 'node2',
+          text: 'Node 2',
+          data: {
+            icon: '', // 假設圖片放在 public 資料夾
+            sexType: 'female',
+            isGoodMan: false,
+          },
+          color: '#00ff00',
+        },
+      ],
+      links: [
+        {
+          from: '1',
+          to: 'node2',
+          data: {
+            type: '朋友',
+          },
+        },
+      ],
+    },
+  },
+  {
+    name: 'GraphC',
+    data: {
+      rootId: '1',
+      nodes: [
+        { id: '1', text: 'a' },
+        { id: 'b', text: 'b' },
+        { id: 'c', text: 'c' },
+        { id: 'd', text: 'd' },
+        { id: 'e', text: 'e' },
+        { id: 'f', text: 'f' },
+      ],
+      lines: [
+        { from: '1', to: 'b' },
+        { from: '1', to: 'c' },
+        { from: '1', to: 'd' },
+        { from: '1', to: 'e' },
+        { from: '1', to: 'f' },
       ],
     },
   },

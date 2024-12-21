@@ -1,20 +1,5 @@
-<template>
-  <div>
-    <div style="margin-top:0px;width: calc(100% - 10px);height:calc(100vh);">
-      <RelationGraph ref="graphRef" :options="graphOptions">
-        <template #node="{node}">
-          <div class="my-node-style" :style="{'background-image': 'url(' + node.data.icon + ')'}">
-          </div>
-          <div class="c-node-name" :style="{color: node.color}">{{ node.text }}</div>
-        </template>
-      </RelationGraph>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue';
-import { graphData } from '../../constants/graphData';
 
 const demoData = {
   nodes: [
@@ -78,6 +63,19 @@ onMounted(() => {
   setGraphData();
 });
 </script>
+<template>
+  <div>
+    <div style="margin-top:0px;width: calc(100% - 10px);height:calc(100vh);">
+      <RelationGraph ref="graphRef" :options="graphOptions">
+        <template #node="{node}">
+          <div class="my-node-style" :style="{'background-image': 'url(' + node.data.icon + ')'}">
+          </div>
+          <div class="c-node-name" :style="{color: node.color}">{{ node.text }}</div>
+        </template>
+      </RelationGraph>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .my-node-style {
