@@ -6,7 +6,7 @@ import RelationshipInfo from './home/RelationshipInfo.vue';
 
 <template>
   <SearchBar />
-  <main class="mx-10 flex gap-5">
+  <main class="flex gap-5">
     <RelationshipInfo/>
     <RelationshipMap />
   </main>

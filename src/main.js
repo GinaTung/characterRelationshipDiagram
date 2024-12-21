@@ -5,6 +5,8 @@ import { createPinia } from 'pinia';
 import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
 import 'primeicons/primeicons.css';
+import ToastService from 'primevue/toastservice'
+import 'primeicons/primeicons.css'
 // import RelationGraph from 'relation-graph'
 import RelationGraph from 'relation-graph-vue3';
 import App from './App.vue';
@@ -15,6 +17,7 @@ import './assets/main.scss';
 const app = createApp(App);
 app.use(createPinia());
 app.use(router);
+app.use(ToastService);
 app.use(PrimeVue, {
   theme: {
     preset: Aura,

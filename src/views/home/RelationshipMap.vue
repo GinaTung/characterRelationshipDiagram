@@ -12,8 +12,8 @@ const bindGraphRef = (el) => {
 
 </script>
 <template>
-  <div style="height: calc(100vh - 100px); max-width: 100%; " class="w-3/4 rounded-lg ">
-    <relation-graph :ref="bindGraphRef" :options="getCommonKgGraph.graphOptions">
+  <div style="height: calc(100vh - 100px); max-width: 100%; " class="w-3/4 rounded-lg" >
+    <relation-graph :ref="bindGraphRef" :options="getCommonKgGraph.graphOptions" >
       <template #node="{ node }">
         <div class="my-node-style" :style="{ 'background-image': 'url(' + node.data.icon + ')' }">
         </div>
