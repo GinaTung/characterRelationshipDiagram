@@ -6,7 +6,7 @@ import { graphData } from '@/constants/graphData';
 
 const getKgGraphData = useKgGraphDataStore();
 const getInfoCardData = useInfoCardDataStore();
-const selectValue = ref('GraphA');
+const selectValue = ref('海賊王');
 const options = graphData.map((item) => item.name);
 
 const updateSelectedGraph = (value) => {
@@ -18,7 +18,7 @@ const updateSelectedGraph = (value) => {
 // 確保 `selectedCardValue` 有默認值
 watch(() => selectValue.value, (newSelectValue) => {
   if (!newSelectValue) {
-    selectValue.value = 'GraphA';
+    selectValue.value = '海賊王';
   }
 });
 </script>

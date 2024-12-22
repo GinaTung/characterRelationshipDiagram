@@ -8,7 +8,7 @@ const infoCardStore = useInfoCardDataStore();
 
 watch(() => infoCardStore.selectedCardValue, (newCardName) => {
   if (!newCardName) {
-    infoCardStore.selectedCardValue = 'GraphA';
+    infoCardStore.selectedCardValue = '海賊王';
   }
 });
 
@@ -21,7 +21,7 @@ const selectedCard = computed(() => infoCardData.find((item) => item.name === in
   <Card
     v-if="selectedCard"
     style="overflow: hidden"
-    class="w-1/4"
+    class="w-1/4 ms-16"
   >
     <template #header>
       <img

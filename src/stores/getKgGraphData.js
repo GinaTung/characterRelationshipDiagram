@@ -6,7 +6,7 @@ import { graphData, defaultGraphData } from '@/constants/graphData';
 
 export default defineStore('useKgGraphDataStore', () => {
   const graphRef = ref(null);
-  const selectedGraph = ref('GraphA');
+  const selectedGraph = ref('海賊王');
   const jsonData = ref({});
   const jsonData2 = defaultGraphData;
 

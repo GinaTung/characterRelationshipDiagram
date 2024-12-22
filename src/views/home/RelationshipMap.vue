@@ -75,8 +75,11 @@ const toggleMask2 = () => {
 </script>
 
 <template>
-  <div style="height: calc(100vh - 100px); max-width: 100%;position: relative;" class="w-3/4 rounded-lg" @click="toggleMask">
-    <Button icon="pi pi-eye" severity="secondary" rounded aria-label="Search" @click.stop="toggleMask2" style="  position: absolute;top: 15px;left: 15px;z-index: 5;" />
+  <div style="height: calc(100vh - 100px);max-width: 100%;position: relative;" class="w-3/4 rounded-lg"
+    @click="toggleMask">
+    <Button icon="pi pi-eye" severity="secondary" rounded aria-label="Search" @click.stop="toggleMask2"
+      style="position: absolute;top: 15px;left: 15px;z-index: 5;" />
+    <div class="bg bg1" style="position: absolute;top:0;left: 0;z-index: 1;"></div>
     <relation-graph :ref="bindGraphRef" :options="getCommonKgGraph.graphOptions">
       <template #node="{ node }">
         <div class="my-node-style" :style="{ 'background-image': 'url(' + node.data.icon + ')' }"></div>
@@ -87,11 +90,24 @@ const toggleMask2 = () => {
 </template>
 
 <style lang="scss">
+.bg {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--color1) 20%, transparent 20%);
+  background-size: 15px 15px; /* 控制點的間距 */
+  border-radius: 12px !important;
+}
+
+.bg1 {
+  --color1: var(--p-slate-100);
+}
+
 .relation-graph .rel-map {
   border-radius: 12px !important;
 }
+
 .relation-graph .rel-easy-view {
-  background: rgba(0, 0, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   z-index: 1000;
   border-radius: 12px !important;
   opacity: 1;
