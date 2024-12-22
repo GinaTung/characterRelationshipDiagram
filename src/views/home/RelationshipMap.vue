@@ -90,6 +90,11 @@ const toggleMask2 = () => {
 </template>
 
 <style lang="scss">
+.relation-graph .c-rg-line-text {
+    dominant-baseline: central !important;
+    font-size: 14px !important;
+    font-weight: bold;
+}
 .bg {
   width: 100%;
   height: 100%;
@@ -124,6 +129,7 @@ const toggleMask2 = () => {
 
 .c-node-name {
   width: 80px;
+  font-weight: bold;
   text-align: center;
   color: #2e74b5;
   margin-top: 10px;

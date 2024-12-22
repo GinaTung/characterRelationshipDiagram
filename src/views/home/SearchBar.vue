@@ -2,12 +2,12 @@
 import { ref, watch } from 'vue';
 import useKgGraphDataStore from '@/stores/getKgGraphData';
 import useInfoCardDataStore from '@/stores/getInfoCardData';
-import { graphData } from '@/constants/graphData';
+import { infoCardData } from '@/constants/infoCardData';
 
 const getKgGraphData = useKgGraphDataStore();
 const getInfoCardData = useInfoCardDataStore();
-const selectValue = ref('海賊王');
-const options = graphData.map((item) => item.name);
+const selectValue = ref('ONE PIECE');
+const options = infoCardData.map((item) => item.name);
 
 const updateSelectedGraph = (value) => {
   selectValue.value = value;
@@ -18,7 +18,7 @@ const updateSelectedGraph = (value) => {
 // 確保 `selectedCardValue` 有默認值
 watch(() => selectValue.value, (newSelectValue) => {
   if (!newSelectValue) {
-    selectValue.value = '海賊王';
+    selectValue.value = 'ONE PIECE';
   }
 });
 </script>

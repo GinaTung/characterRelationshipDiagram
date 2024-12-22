@@ -8,7 +8,7 @@ const infoCardStore = useInfoCardDataStore();
 
 watch(() => infoCardStore.selectedCardValue, (newCardName) => {
   if (!newCardName) {
-    infoCardStore.selectedCardValue = '海賊王';
+    infoCardStore.selectedCardValue = 'ONE PIECE';
   }
 });
 
