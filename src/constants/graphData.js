@@ -1,60 +1,96 @@
+import MonkeyDLuffy from '@/assets/images/onepiece/MonkeyDLuffy.jpg';
+import RoronoaZoro from '@/assets/images/onepiece/RoronoaZoro.webp';
+import Nami from '@/assets/images/onepiece/Nami.webp';
+import Usopp from '@/assets/images/onepiece/Usopp.webp';
+import VinsmokeSanji from '@/assets/images/onepiece/VinsmokeSanji.webp';
+import Shanks from '@/assets/images/onepiece/Shanks.webp';
+import PortgasDAce from '@/assets/images/onepiece/PortgasDAce.webp';
+import EdwardNewgate from '@/assets/images/onepiece/EdwardNewgate.webp';
+import Smoker from '@/assets/images/onepiece/Smoker.webp';
+import Sakazuki from '@/assets/images/onepiece/Sakazuki.webp';
+import GoingMerry from '@/assets/images/onepiece/GoingMerry.webp';
+import RedHairPirates from '@/assets/images/onepiece/Red_Hair_Pirates.webp';
+import MarinefordArc from '@/assets/images/onepiece/Marineford_Arc.webp';
+import MonkeyDGarp from '@/assets/images/onepiece/MonkeyDGarp.webp';
+import MonkeyDDragon from '@/assets/images/onepiece/MonkeyDDragon.webp';
+import SaboMeraMera from '@/assets/images/onepiece/Sabo_Mera_Mera.webp';
+import TonyTonyChopper from '@/assets/images/onepiece/TonyTonyChopper.webp';
+import Franky from '@/assets/images/onepiece/Franky.webp';
+import NicoRobin from '@/assets/images/onepiece/NicoRobin.webp';
+import Brook from '@/assets/images/onepiece/Brook.webp';
+import Jinbe from '@/assets/images/onepiece/Jinbe.webp';
+import GonFreecss from '@/assets/images/hunters/GonFreecss.webp';
+import Mito from '@/assets/images/hunters/Mito.webp';
+import KilluaZoldyck from '@/assets/images/hunters/KilluaZoldyck.webp';
+import Kurapika from '@/assets/images/hunters/Kurapika.webp';
+import LeorioPaladinight from '@/assets/images/hunters/LeorioPaladinight.webp';
+import HisokaMorow from '@/assets/images/hunters/HisokaMorow.webp';
+import ChrolloLucilfer from '@/assets/images/hunters/ChrolloLucilfer.webp';
+import Kite from '@/assets/images/hunters/Kite.webp';
+import GingFreecss from '@/assets/images/hunters/GingFreecss.webp';
+import BiscuitKrueger from '@/assets/images/hunters/BiscuitKrueger.webp';
+import Wing from '@/assets/images/hunters/Wing.webp';
+import IllumiZoldyck from '@/assets/images/hunters/IllumiZoldyck.webp';
+import ZenoZoldyck from '@/assets/images/hunters/ZenoZoldyck.webp';
+import AllukaZoldyck from '@/assets/images/hunters/AllukaZoldyck.webp';
+
 export const defaultGraphData = {
   rootId: '1',
   nodes: [
     {
-      id: '1', text: '蒙奇·D·路飛', labelStr: '人物', color: '#ff0000', data: { icon: '/src/assets/images/onepiece/MonkeyDLuffy.jpg', sexType: 'male', isGoodMan: true },
+      id: '1', text: '蒙奇·D·路飛', labelStr: '人物', color: '#ff0000', data: { icon: MonkeyDLuffy, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '2', text: '羅羅亞·索隆', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/RoronoaZoro.webp', sexType: 'male', isGoodMan: true },
+      id: '2', text: '羅羅亞·索隆', labelStr: '人物', data: { icon: RoronoaZoro, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '3', text: '娜美', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Nami.webp', sexType: 'female', isGoodMan: true },
+      id: '3', text: '娜美', labelStr: '人物', data: { icon: Nami, sexType: 'female', isGoodMan: true },
     },
     {
-      id: '4', text: '騙人布（烏索普）', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Usopp.webp', sexType: 'male', isGoodMan: true },
+      id: '4', text: '騙人布（烏索普）', labelStr: '人物', data: { icon: Usopp, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '5', text: '香吉士（山治）', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/VinsmokeSanji.webp', sexType: 'male', isGoodMan: true },
+      id: '5', text: '香吉士（山治）', labelStr: '人物', data: { icon: VinsmokeSanji, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '6', text: '紅髮傑克', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Shanks.webp', sexType: 'male', isGoodMan: true },
+      id: '6', text: '紅髮傑克', labelStr: '人物', data: { icon: Shanks, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '7', text: '波特卡斯·D·艾斯', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/PortgasDAce.webp', sexType: 'male', isGoodMan: true },
+      id: '7', text: '波特卡斯·D·艾斯', labelStr: '人物', data: { icon: PortgasDAce, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '8', text: '白鬍子', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/EdwardNewgate.webp', sexType: 'male', isGoodMan: true },
+      id: '8', text: '白鬍子', labelStr: '人物', data: { icon: EdwardNewgate, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '9', text: '斯摩格', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Smoker.webp', sexType: 'male', isGoodMan: true },
+      id: '9', text: '斯摩格', labelStr: '人物', data: { icon: Smoker, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '10', text: '赤犬', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Sakazuki.webp', sexType: 'male', isGoodMan: true },
+      id: '10', text: '赤犬', labelStr: '人物', data: { icon: Sakazuki, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '11', text: '草帽海賊團', labelStr: '組織', data: { icon: '/src/assets/images/onepiece/GoingMerry.webp', sexType: 'male', isGoodMan: true },
+      id: '11', text: '草帽海賊團', labelStr: '組織', data: { icon: GoingMerry, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '12', text: '紅髮海賊團', labelStr: '組織', data: { icon: '/src/assets/images/onepiece/Red_Hair_Pirates.webp', sexType: 'male', isGoodMan: true },
+      id: '12', text: '紅髮海賊團', labelStr: '組織', data: { icon: RedHairPirates, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '13', text: '頂上戰爭', labelStr: '事件', data: { icon: '/src/assets/images/onepiece/Marineford_Arc.webp', sexType: 'male', isGoodMan: true },
+      id: '13', text: '頂上戰爭', labelStr: '事件', data: { icon: MarinefordArc, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '14', text: '蒙奇·D·卡普', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/MonkeyDGarp.webp', sexType: 'male', isGoodMan: true },
+      id: '14', text: '蒙奇·D·卡普', labelStr: '人物', data: { icon: MonkeyDGarp, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '15', text: '蒙奇·D·龍', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/MonkeyDDragon.webp', sexType: 'male', isGoodMan: true },
+      id: '15', text: '蒙奇·D·龍', labelStr: '人物', data: { icon: MonkeyDDragon, sexType: 'male', isGoodMan: true },
     },
     {
-      id: '16', text: '薩波', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Sabo_Mera_Mera.webp', sexType: 'male', isGoodMan: true },
+      id: '16', text: '薩波', labelStr: '人物', data: { icon: SaboMeraMera, sexType: 'male', isGoodMan: true },
     },
     {
       id: '17',
       text: '托尼托尼·喬巴',
       labelStr: '人物',
       data: {
-        icon: '/src/assets/images/onepiece/TonyTonyChopper.webp', sexType: 'male', isGoodMan: true, position: '船醫', nickname: '愛吃棉花糖的喬巴', dream: '成為能醫治所有疾病的萬能藥',
+        icon: TonyTonyChopper, sexType: 'male', isGoodMan: true, position: '船醫', nickname: '愛吃棉花糖的喬巴', dream: '成為能醫治所有疾病的萬能藥',
       },
     },
     {
@@ -62,7 +98,7 @@ export const defaultGraphData = {
       text: '弗蘭奇',
       labelStr: '人物',
       data: {
-        icon: '/src/assets/images/onepiece/Franky.webp',
+        icon: Franky,
         sexType: 'male',
         isGoodMan: true,
         position: '船匠',
@@ -76,7 +112,7 @@ export const defaultGraphData = {
       text: '妮可·羅賓',
       labelStr: '人物',
       data: {
-        icon: '/src/assets/images/onepiece/NicoRobin.webp', sexType: 'female', isGoodMan: true, position: '考古學家', nickname: '惡魔之子', goal: '找到真正的歷史正文',
+        icon: NicoRobin, sexType: 'female', isGoodMan: true, position: '考古學家', nickname: '惡魔之子', goal: '找到真正的歷史正文',
       },
     },
     {
@@ -84,7 +120,7 @@ export const defaultGraphData = {
       text: '布魯克',
       labelStr: '人物',
       data: {
-        icon: '/src/assets/images/onepiece/Brook.webp',
+        icon: Brook,
         sexType: 'male',
         isGoodMan: true,
         position: '音樂家',
@@ -98,7 +134,7 @@ export const defaultGraphData = {
       text: '甚平',
       labelStr: '人物',
       data: {
-        icon: '/src/assets/images/onepiece/Jinbe.webp',
+        icon: Jinbe,
         sexType: 'male',
         isGoodMan: true,
         position: '舵手',
@@ -182,59 +218,59 @@ export const graphData = [
       rootId: '1',
       nodes: [
         {
-          id: '1', text: '蒙奇·D·路飛', labelStr: '人物', color: '#ff0000', data: { icon: '/src/assets/images/onepiece/MonkeyDLuffy.jpg', sexType: 'male', isGoodMan: true },
+          id: '1', text: '蒙奇·D·路飛', labelStr: '人物', color: '#ff0000', data: { icon: MonkeyDLuffy, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '2', text: '羅羅亞·索隆', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/RoronoaZoro.webp', sexType: 'male', isGoodMan: true },
+          id: '2', text: '羅羅亞·索隆', labelStr: '人物', data: { icon: RoronoaZoro, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '3', text: '娜美', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Nami.webp', sexType: 'female', isGoodMan: true },
+          id: '3', text: '娜美', labelStr: '人物', data: { icon: Nami, sexType: 'female', isGoodMan: true },
         },
         {
-          id: '4', text: '騙人布（烏索普）', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Usopp.webp', sexType: 'male', isGoodMan: true },
+          id: '4', text: '騙人布（烏索普）', labelStr: '人物', data: { icon: Usopp, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '5', text: '香吉士（山治）', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/VinsmokeSanji.webp', sexType: 'male', isGoodMan: true },
+          id: '5', text: '香吉士（山治）', labelStr: '人物', data: { icon: VinsmokeSanji, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '6', text: '紅髮傑克', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Shanks.webp', sexType: 'male', isGoodMan: true },
+          id: '6', text: '紅髮傑克', labelStr: '人物', data: { icon: Shanks, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '7', text: '波特卡斯·D·艾斯', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/PortgasDAce.webp', sexType: 'male', isGoodMan: true },
+          id: '7', text: '波特卡斯·D·艾斯', labelStr: '人物', data: { icon: PortgasDAce, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '8', text: '白鬍子', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/EdwardNewgate.webp', sexType: 'male', isGoodMan: true },
+          id: '8', text: '白鬍子', labelStr: '人物', data: { icon: EdwardNewgate, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '9', text: '斯摩格', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Smoker.webp', sexType: 'male', isGoodMan: true },
+          id: '9', text: '斯摩格', labelStr: '人物', data: { icon: Smoker, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '10', text: '赤犬', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Sakazuki.webp', sexType: 'male', isGoodMan: true },
+          id: '10', text: '赤犬', labelStr: '人物', data: { icon: Sakazuki, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '11', text: '草帽海賊團', labelStr: '組織', data: { icon: '/src/assets/images/onepiece/GoingMerry.webp', sexType: 'male', isGoodMan: true },
+          id: '11', text: '草帽海賊團', labelStr: '組織', data: { icon: GoingMerry, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '12', text: '紅髮海賊團', labelStr: '組織', data: { icon: '/src/assets/images/onepiece/Red_Hair_Pirates.webp', sexType: 'male', isGoodMan: true },
+          id: '12', text: '紅髮海賊團', labelStr: '組織', data: { icon: RedHairPirates, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '13', text: '頂上戰爭', labelStr: '事件', data: { icon: '/src/assets/images/onepiece/Marineford_Arc.webp', sexType: 'male', isGoodMan: true },
+          id: '13', text: '頂上戰爭', labelStr: '事件', data: { icon: MarinefordArc, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '14', text: '蒙奇·D·卡普', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/MonkeyDGarp.webp', sexType: 'male', isGoodMan: true },
+          id: '14', text: '蒙奇·D·卡普', labelStr: '人物', data: { icon: MonkeyDGarp, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '15', text: '蒙奇·D·龍', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/MonkeyDDragon.webp', sexType: 'male', isGoodMan: true },
+          id: '15', text: '蒙奇·D·龍', labelStr: '人物', data: { icon: MonkeyDDragon, sexType: 'male', isGoodMan: true },
         },
         {
-          id: '16', text: '薩波', labelStr: '人物', data: { icon: '/src/assets/images/onepiece/Sabo_Mera_Mera.webp', sexType: 'male', isGoodMan: true },
+          id: '16', text: '薩波', labelStr: '人物', data: { icon: SaboMeraMera, sexType: 'male', isGoodMan: true },
         },
         {
           id: '17',
           text: '托尼托尼·喬巴',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/onepiece/TonyTonyChopper.webp', sexType: 'male', isGoodMan: true, position: '船醫', nickname: '愛吃棉花糖的喬巴', dream: '成為能醫治所有疾病的萬能藥',
+            icon: TonyTonyChopper, sexType: 'male', isGoodMan: true, position: '船醫', nickname: '愛吃棉花糖的喬巴', dream: '成為能醫治所有疾病的萬能藥',
           },
         },
         {
@@ -242,7 +278,7 @@ export const graphData = [
           text: '弗蘭奇',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/onepiece/Franky.webp',
+            icon: Franky,
             sexType: 'male',
             isGoodMan: true,
             position: '船匠',
@@ -256,7 +292,7 @@ export const graphData = [
           text: '妮可·羅賓',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/onepiece/NicoRobin.webp', sexType: 'female', isGoodMan: true, position: '考古學家', nickname: '惡魔之子', goal: '找到真正的歷史正文',
+            icon: NicoRobin, sexType: 'female', isGoodMan: true, position: '考古學家', nickname: '惡魔之子', goal: '找到真正的歷史正文',
           },
         },
         {
@@ -264,7 +300,7 @@ export const graphData = [
           text: '布魯克',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/onepiece/Brook.webp',
+            icon: Brook,
             sexType: 'male',
             isGoodMan: true,
             position: '音樂家',
@@ -278,7 +314,7 @@ export const graphData = [
           text: '甚平',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/onepiece/Jinbe.webp',
+            icon: Jinbe,
             sexType: 'male',
             isGoodMan: true,
             position: '舵手',
@@ -366,7 +402,7 @@ export const graphData = [
           labelStr: '人物',
           color: '#ff0000',
           data: {
-            icon: '/src/assets/images/hunters/GonFreecss.webp',
+            icon: GonFreecss,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -376,7 +412,7 @@ export const graphData = [
           text: '米特',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/Mito.webp',
+            icon: Mito,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -386,7 +422,7 @@ export const graphData = [
           text: '奇犽·揍敵客',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/KilluaZoldyck.webp',
+            icon: KilluaZoldyck,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -396,7 +432,7 @@ export const graphData = [
           text: '酷拉皮卡',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/Kurapika.webp',
+            icon: Kurapika,
             sexType: 'female',
             isGoodMan: true,
           },
@@ -406,7 +442,7 @@ export const graphData = [
           text: '雷歐力·帕拉丁奈特',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/LeorioPaladinight.webp',
+            icon: LeorioPaladinight,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -416,7 +452,7 @@ export const graphData = [
           text: '西索·莫羅',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/HisokaMorow.webp',
+            icon: HisokaMorow,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -426,7 +462,7 @@ export const graphData = [
           text: '庫洛洛·魯西魯',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/ChrolloLucilfer.webp',
+            icon: ChrolloLucilfer,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -436,7 +472,7 @@ export const graphData = [
           text: '凱特',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/Kite.webp',
+            icon: Kite,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -446,7 +482,7 @@ export const graphData = [
           text: '金·富力士',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/GingFreecss.webp',
+            icon: GingFreecss,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -456,7 +492,7 @@ export const graphData = [
           text: '比司吉·酷露佳',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/BiscuitKrueger.webp',
+            icon: BiscuitKrueger,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -466,7 +502,7 @@ export const graphData = [
           text: '雲谷',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/Wing.webp',
+            icon: Wing,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -476,7 +512,7 @@ export const graphData = [
           text: '伊路米·揍敵客',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/IllumiZoldyck.webp',
+            icon: IllumiZoldyck,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -486,7 +522,7 @@ export const graphData = [
           text: '桀諾．揍敵客',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/ZenoZoldyck.webp',
+            icon: ZenoZoldyck,
             sexType: 'male',
             isGoodMan: true,
           },
@@ -496,7 +532,7 @@ export const graphData = [
           text: '阿路加•揍敵客',
           labelStr: '人物',
           data: {
-            icon: '/src/assets/images/hunters/AllukaZoldyck.webp',
+            icon: AllukaZoldyck,
             sexType: 'male',
             isGoodMan: true,
           },
