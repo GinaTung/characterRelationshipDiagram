@@ -44,7 +44,7 @@ export const useCommonKgGraphStore = defineStore('graphKgStore', () => {
       layoutName: 'force',
       from: 'left',
       maxLayoutTimes: 1000,
-      force_node_repulsion: 3,
+      force_node_repulsion: 2,
       force_line_elastic: 3,
     },
     defaultJunctionPoint: 'border',
