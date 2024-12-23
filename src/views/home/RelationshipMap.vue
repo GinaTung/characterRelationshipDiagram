@@ -50,32 +50,11 @@ const toggleMask = () => {
 const toggleMask2 = () => {
   showMask.value = true;
 };
-// 切换遮罩状态
-// const toggleMask3 = () => {
-//   // 清除已有定时器（防止多次点击时重复触发）
-//   if (maskTimeout) {
-//     clearTimeout(maskTimeout);
-//     maskTimeout = null;
-//   }
 
-//   // 切换遮罩状态并记录时间戳
-//   showMask.value = !showMask.value;
-//   lastToggleTime.value = Date.now();
-
-//   console.log(`Mask toggled to: ${showMask.value}, at time: ${lastToggleTime.value}`);
-
-//   // 如果遮罩被打开，设置10秒后自动关闭
-//   if (!showMask.value) {
-//     maskTimeout = setTimeout(() => {
-//       showMask.value = true;
-//       console.log('Mask automatically hidden after 10 seconds.');
-//     }, 20000); // 10秒后隐藏遮罩
-//   }
-// };
 </script>
 
 <template>
-  <div style="height: calc(100vh - 100px);max-width: 100%;position: relative;" class="w-3/4 rounded-lg"
+  <div style="position: relative;" class="w-full lg:w-3/4 min-h-screen lg:h-[100vh-100px] rounded-lg"
     @click="toggleMask">
     <Button icon="pi pi-eye" severity="secondary" rounded aria-label="Search" @click.stop="toggleMask2"
       style="position: absolute;top: 15px;left: 15px;z-index: 5;" />
@@ -104,7 +83,7 @@ const toggleMask2 = () => {
 }
 
 .bg1 {
-  --color1: var(--p-slate-100);
+  --color1:rgba(255, 126, 99, 0.1);
 }
 
 .relation-graph .rel-map {

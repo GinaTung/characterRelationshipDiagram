@@ -9,7 +9,7 @@ import SideBarView from '../components/SideBarView.vue';
   <SearchBar />
   <main >
     <SideBarView />
-    <div class="flex gap-5" style="height: calc(100vh - 100px);">
+    <div class="flex gap-5 flex-wrap lg:flex-nowrap h-[100vh-100px]">
       <RelationshipInfo/>
       <RelationshipMap />
     </div>

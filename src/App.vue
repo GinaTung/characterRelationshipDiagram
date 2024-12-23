@@ -5,7 +5,7 @@ import FooterView from './components/FooterView.vue';
 </script>
 
 <template>
-  <div class="mt-2 mb-8 mx-4">
+  <div class="mt-0 lg:mt-2 mb-8 mx-4">
     <HeaderView />
     <RouterView />
   </div>

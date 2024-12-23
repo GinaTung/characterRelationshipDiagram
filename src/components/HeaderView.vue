@@ -9,16 +9,12 @@ const items = ref([
 </script>
 <template>
   <div class="sticky top-0" style="z-index: 10001;">
-    <Menubar class="mt-3" style="border-radius: 12px;">
+    <Menubar class="mt-0 lg:mt-3 flex-col lg:flex-row" style="border-radius: 12px;">
       <template #start>
         <h1 class="text-3xl">故事人物關係圖</h1>
       </template>
-      <!-- <template #item="{ item }">
-        <Button class="text-2xl px-2 py-1" severity="secondary" style="cursor: pointer;">{{item.label}}</Button>
-      </template> -->
       <template #end>
         <div class="flex items-center gap-2">
-          <!-- <InputText placeholder="Search" type="text" class="w-32 sm:w-auto" /> -->
           <p class="text-xl font-bold">分類：動漫</p>
         </div>
       </template>
@@ -32,5 +28,13 @@ const items = ref([
     flex-wrap: wrap;
     flex: 1 1 auto;
     gap: var(--p-menubar-gap);
+}
+.p-menubar-end {
+    margin-left: 0px;
+  }
+@media(min-width: 1024px){
+  .p-menubar-end {
+    margin-left: auto;
+  }
 }
 </style>

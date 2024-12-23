@@ -39,7 +39,7 @@
 <style>
 .btn {
   position: relative;
-  color: var(--p-slate-950);
+  color:var(--p-surface-0);
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -60,7 +60,7 @@
   right: 0;
   width: 48px;
   height: 48px;
-  background: var(--p-surface-0);
+  background: rgba(255, 126, 99, 0.9);
   border-radius: 28px;
   transition: all 0.5s ease;
   z-index: 0;
@@ -108,16 +108,16 @@
 }
 
 .btn:focus:not(:hover) {
-  color: var(--p-slate-950); /* 恢復原始文字顏色 */
+  color: var(--p-surface-0); /* 恢復原始文字顏色 */
 }
 
 .btn:focus:not(:hover):before {
   width: 48px; /* 恢復原始寬度 */
-  background: var(--p-surface-0); /* 恢復原始背景色 */
+  background: rgba(255, 126, 99, 0.9); /* 恢復原始背景色 */
 }
 
 .btn:focus:not(:hover) i {
-  color: var(--p-slate-950); /* 恢復圖標顏色 */
+  color: var(--p-surface-0); /* 恢復圖標顏色 */
 }
 
 .btn:active {

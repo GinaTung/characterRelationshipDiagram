@@ -17,11 +17,10 @@ const selectedCard = computed(() => infoCardData.find((item) => item.name === in
 </script>
 
 <template>
-  <!-- 渲染選中的卡片 -->
   <Card
     v-if="selectedCard"
-    style="overflow: hidden"
-    class="w-1/4 ms-16"
+    class="lg:w-1/4 ms-16 min-h-screen pb-5"
+    style="overflow: hidden;"
   >
     <template #header>
       <img
@@ -33,12 +32,14 @@ const selectedCard = computed(() => infoCardData.find((item) => item.name === in
     <template #title>{{ selectedCard.name }}</template>
     <template #subtitle>{{ selectedCard.subtitle }}</template>
     <template #content>
-      <p class="mb-5">
-        {{ selectedCard.description }}
-      </p>
-      <p class="mb-5">
-        {{ selectedCard.description2 }}
-      </p>
+      <div class="overflow-auto">
+        <p class="mb-5">
+          {{ selectedCard.description }}
+        </p>
+        <p class="mb-5">
+          {{ selectedCard.description2 }}
+        </p>
+      </div>
     </template>
   </Card>
 </template>
