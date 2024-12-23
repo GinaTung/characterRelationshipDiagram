@@ -3,32 +3,30 @@ import { ref, watch } from 'vue';
 import { useCommonKgGraphStore } from '@/stores/getCommonKgGraph';
 import useKgGraphDataStore from '@/stores/getKgGraphData';
 
-// 状态管理
+// 狀態管理
 const getCommonKgGraph = useCommonKgGraphStore();
 const getKgGraphData = useKgGraphDataStore();
 
-// 绑定 RelationGraph 实例到 Pinia 的 graphRef
+// 绑定 RelationGraph 實例到 Pinia 的 graphRef
 const bindGraphRef = (el) => {
   getKgGraphData.graphRef = el;
 };
 
-// 绑定 showMask 的状态
+// 绑定 showMask 的狀態
 const showMask = ref(true);
-const lastToggleTime = ref(null); // 保存上次切换遮罩的时间
-const maskTimeout = null; // 用于定时器
 
 const refreshGraphWithOptions = () => {
   const graphInstance = getKgGraphData.graphRef?.getInstance();
   if (graphInstance) {
     graphInstance.setOptions(getCommonKgGraph.graphOptions); // 更新配置
-    graphInstance.refresh(); // 刷新图表
+    graphInstance.refresh(); // 刷新圖表
     console.log('Graph instance refreshed with updated options.');
   } else {
     console.warn('Graph instance not available.');
   }
 };
 
-// 监听 showMask 变化
+// 監聽 showMask
 watch(showMask, (newVal) => {
   // 更新透明度
   const relEasyView = document.querySelector('.relation-graph .rel-easy-view');
@@ -37,11 +35,11 @@ watch(showMask, (newVal) => {
     relEasyView.style.zIndex = newVal ? '1000' : '-1';
   }
 
-  // 更新 disableZoom 状态
+  // 更新 disableZoom 狀態
   getCommonKgGraph.graphOptions.disableZoom = newVal;
   console.log(`disableZoom updated to: ${getCommonKgGraph.graphOptions.disableZoom}`);
 
-  // 刷新图表以应用更改
+  // 刷新圖表
   refreshGraphWithOptions();
 });
 const toggleMask = () => {
