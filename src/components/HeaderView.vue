@@ -1,20 +1,26 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 
-const items = ref([
-  {
-    label: '動漫',
-  },
-]);
+const router = useRouter();
+const route = useRoute();
+
+const handleTitleClick = () => {
+  if (route.path !== '/') {
+    window.location.href = '/'; // 非首頁時刷新
+  } else {
+    router.push('/'); // 如果已經是首頁，僅切換路由
+  }
+};
 
 </script>
 <template>
   <div class="sticky top-0" style="z-index: 10001;">
     <Menubar class="mt-0 lg:mt-3 flex-col lg:flex-row" style="border-radius: 12px;">
       <template #start>
-        <router-link to="/" class="text-3xl no-underline hover:text-[#ff7e63e6]">
-          <h1>故事人物關係圖</h1>
-        </router-link>
+        <h1 class="text-3xl cursor-pointer" @click="handleTitleClick">
+          故事人物關係圖
+        </h1>
       </template>
 
       <template #end>
