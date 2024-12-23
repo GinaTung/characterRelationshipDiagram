@@ -6,6 +6,7 @@ const items = ref([
     label: '動漫',
   },
 ]);
+
 </script>
 <template>
   <div class="sticky top-0" style="z-index: 10001;">

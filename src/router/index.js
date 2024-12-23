@@ -18,4 +18,12 @@ const router = createRouter({
   ],
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.path === '/' && from.path !== '/') {
+    window.location.href = '/';
+  } else {
+    next();
+  }
+});
+
 export default router;
