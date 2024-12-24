@@ -20,7 +20,6 @@ const refreshGraphWithOptions = () => {
   if (graphInstance) {
     graphInstance.setOptions(getCommonKgGraph.graphOptions); // 更新配置
     graphInstance.refresh(); // 刷新圖表
-    console.log('Graph instance refreshed with updated options.');
   } else {
     console.warn('Graph instance not available.');
   }
@@ -37,8 +36,6 @@ watch(showMask, (newVal) => {
 
   // 更新 disableZoom 狀態
   getCommonKgGraph.graphOptions.disableZoom = newVal;
-  console.log(`disableZoom updated to: ${getCommonKgGraph.graphOptions.disableZoom}`);
-
   // 刷新圖表
   refreshGraphWithOptions();
 });

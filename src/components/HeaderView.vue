@@ -1,11 +1,23 @@
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const handleTitleClick = () => {
+  if (route.path !== '/') {
+    window.location.href = '/characterRelationshipDiagram/';
+  } else {
+    window.location.reload();
+  }
+};
+</script>
 <template>
   <div class="sticky top-0" style="z-index: 10001;">
     <Menubar class="mt-0 lg:mt-3 flex-col lg:flex-row" style="border-radius: 12px;">
       <template #start>
         <div class="flex items-center gap-2">
-          <router-link to="/" class="text-3xl text-black font-bold no-underline hover:text-[#ff7e63e6]">
-            <p>故事人物關係圖</p>
-          </router-link>
+          <Button label="故事人物關係圖"
+          class="text-3xl text-black font-bold no-underline hover:text-[#ff7e63e6] bg-white border-0"  @click="handleTitleClick"></Button>
         </div>
       </template>
 
