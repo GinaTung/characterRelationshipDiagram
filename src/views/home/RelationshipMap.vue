@@ -51,7 +51,7 @@ const toggleMask2 = () => {
 <template>
   <div style="position: relative;" class="w-full lg:w-3/4 min-h-screen lg:h-[100vh-100px] rounded-lg"
     @click="toggleMask">
-    <Button icon="pi pi-eye" severity="secondary" rounded aria-label="Search" @click.stop="toggleMask2"
+    <Button :icon="showMask ? 'pi pi-eye-slash' : 'pi pi-eye'"  severity="secondary" rounded aria-label="Search" @click.stop="toggleMask2"
       style="position: absolute;top: 15px;left: 15px;z-index: 5;" />
     <div class="bg bg1" style="position: absolute;top:0;left: 0;z-index: 1;"></div>
     <relation-graph :ref="bindGraphRef" :options="getCommonKgGraph.graphOptions">

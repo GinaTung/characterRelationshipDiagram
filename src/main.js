@@ -1,4 +1,4 @@
-import './assets/base.css';
+import './assets/style/all.scss';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
@@ -22,12 +22,15 @@ app.use(PrimeVue, {
   theme: {
     preset: Aura,
     options: {
-      cssLayer: { // tailwindCSS 及 primeVue 載入順序設定
+      // 取消深色模式
+      darkModeSelector: false, 
+      cssLayer: { // TailwindCSS 和 PrimeVue 的载入顺序设置
         name: 'primevue',
         order: 'tailwind-base, primevue, tailwind-utilities',
       },
     },
   },
 });
+
 app.use(RelationGraph);
 app.mount('#app');
