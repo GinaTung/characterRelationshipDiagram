@@ -8,10 +8,21 @@ import SideBarView from '../components/SideBarView.vue';
 <template>
   <SearchBar />
   <main >
-    <SideBarView />
+    <SideBarView class="siderbar-hide" />
+
     <div class="flex gap-5 flex-wrap lg:flex-nowrap h-[100vh-100px]">
       <RelationshipInfo/>
       <RelationshipMap />
     </div>
   </main>
 </template>
+<style>
+.siderbar-hide {
+  display: none !important;
+}
+@media(min-width: 1024px){
+  .siderbar-hide {
+  display: flex !important;
+}
+}
+</style>

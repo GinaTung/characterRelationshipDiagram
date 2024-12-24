@@ -19,7 +19,7 @@ const selectedCard = computed(() => infoCardData.find((item) => item.name === in
 <template>
   <Card
     v-if="selectedCard"
-    class="lg:w-1/4 ms-16 min-h-screen pb-5"
+    class="lg:w-1/4 lg:ms-16 min-h-screen pb-5"
     style="overflow: hidden;"
   >
     <template #header>

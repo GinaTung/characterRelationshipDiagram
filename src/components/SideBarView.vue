@@ -27,7 +27,7 @@ import { sideBarData } from '@/constants/sideBarData';
   gap: 10px;
   background: var(--p-surface-2);
   padding: 20px 0;
-  z-index: 1000;
+  z-index: 1003;
 }
 .btn {
   position: relative;

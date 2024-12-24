@@ -87,7 +87,7 @@ const toggleMask2 = () => {
 
 .relation-graph .rel-easy-view {
   background: rgba(0, 0, 0, 0.3) !important;
-  z-index: 1000;
+  z-index: 1001 !important;
   border-radius: 12px !important;
   opacity: 1;
 }
