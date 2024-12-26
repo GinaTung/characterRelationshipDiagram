@@ -37,7 +37,7 @@ import { sideBarData } from '@/constants/sideBarData';
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  padding: 13px 16px;
+  padding: 14px 16px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
