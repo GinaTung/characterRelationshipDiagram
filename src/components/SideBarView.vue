@@ -1,5 +1,14 @@
 <script setup>
 import { sideBarData } from '@/constants/sideBarData';
+
+const handleSideBarClick = (btnValue) => {
+  console.log(btnValue);
+  if (btnValue === '查詢人物關係資訊') {
+    window.location.href = '/characterRelationshipDiagram/#/ManageRelationshipInfo';
+  } else {
+    window.location.href = '/characterRelationshipDiagram/';
+  }
+};
 </script>
 <template>
   <div class="button-block">
@@ -9,6 +18,7 @@ import { sideBarData } from '@/constants/sideBarData';
       :aria-label="button.ariaLabel"
       unstyled
       class="btn btn2"
+      @click="handleSideBarClick(button.text)"
     >
       <i :class="button.icon"></i>
       <span>{{ button.text }}</span>
